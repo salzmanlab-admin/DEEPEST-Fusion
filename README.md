@@ -32,7 +32,14 @@ All input parameters required for running sMACHETE JSON script should be provide
 - Pickle files for genes/exons annotation
 - Pickle file for the known fusions list (a list of known fusions constructed based on ChimerDB 3.0 curated list of known cancer fusions)
 
-# Executing sMACHETE JSON script
+# Toolkit for executing sMACHETE JSON script
 
 For running sMACHETE JSON script on a local cluster, Rabix should be installed first. Rabix is an open-source tool developed by Seven Bridges, that can be used to run a computational workflow written in Common Workflow Language (CWL) on a locul cluster. More information on how to install Rabix can be found in this GitHub repositiory: https://github.com/rabix/bunny  
 
+# An example Batch script for submitting sMACHETE jobs on a local cluster
+
+An example batch script "sMACHETE_submit_job.sbatch", based on job scheduler Slurm has been provided. In the batch script file the path to where Rabix has been installed, sMACHETE pipeline JSON file (sMACHETE_pipeline.json), and sMACHETE input JSON file (sMACHETE_input.json) should be provided. 
+
+# Scripts for implementing Sequence Bloom Trees for an RNA-Seq database
+
+All scripts needed for implementing Sequence Bloom Tree (SBT) filters for an RNA-Seq database can be found in this github repository: https://github.com/elehnertSBG/SBT-Apps. Mor information on the SBT algorithm and the order in which the SBT CWL scripts should be run can be found in the original SBT manual: https://www.cs.cmu.edu/~ckingsf/software/bloomtree/sbt-manual.pdf 
