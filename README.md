@@ -14,7 +14,7 @@ This repository contains the JSON script written in Common Workflow Language (CW
 
 # Genome files
 
-All Bowtie2 reference index files (genome, transcriptome, regular junctions, scrambled junctions, ribosome) have been pre processed and available for human GRCh38 assembly. 
+All Bowtie2 reference index files (genome, transcriptome, regular junctions, scrambled junctions, ribosome) have been pre processed and are available for human GRCh38 assembly. 
 
 # Input file
 
@@ -30,7 +30,7 @@ All input parameters required for running sMACHETE JSON script should be provide
 - Pickle files for genes/exons annotation
 - Pickle file for the known fusions list (a list of known fusions constructed based on ChimerDB 3.0 curated list of known cancer fusions)
 
-# Executing the sMACHETE JSON script
+# Executing sMACHETE JSON script
 
 For running sMACHETE JSON script on a local cluster, Rabix should be installed first. Rabix is an open-source tool developed by Seven Bridges, that can be used to run a computational workflow written in Common Workflow Language (CWL) on a locul cluster. More information on how to install Rabix can be found in this GitHub repositiory: https://github.com/rabix/bunny  
 
