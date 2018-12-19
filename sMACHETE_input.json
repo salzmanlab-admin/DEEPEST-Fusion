@@ -1,0 +1,133 @@
+{
+    "bowtie_index_archive_genome":
+    {
+        "class" : "File",
+        "path": "/ifs/scratch/jorda/reference_files/GRCh38.ensembl89/GRCh38.ensembl89_genome_bowtie2-2.3.2.tar",
+        "metadata": {
+            "reference_genome": "GRCh38.ensembl89_genome"
+        }
+    },
+    
+    "bowtie_index_archive_regular_junctions":
+    {
+        "class" : "File",
+        "path": "/ifs/scratch/jorda/reference_files/GRCh38.ensembl89/GRCh38_no_ERCC_junctions_reg_no_exon_15_new_condition.tar",
+        "metadata": {
+            "reference_genome": "GRCh38_no_ERCC_junctions_reg_no_exon_15_new_condition"
+        }
+    },
+    
+    "bowtie_index_archive_scrambled_junctions":
+    {
+        "class" : "File",
+        "path": "/ifs/scratch/jorda/reference_files/GRCh38.ensembl89/GRCh38_no_ERCC_junctions_scrambled_no_exon_15_new_condition.tar",
+        "metadata": {
+            "reference_genome": "GRCh38_no_ERCC_junctions_scrambled_no_exon_15_new_condition"
+        }
+    },
+    
+    
+    "bowtie_index_archive_ribosomal":
+    {
+        "class" : "File",
+        "path": "/ifs/scratch/jorda/reference_files/GRCh38.ensembl89/grch38_ribosomal_bowtie2-2.3.2.tar",
+        "metadata": {
+                "reference_genome": "grch38_ribosomal"
+            }
+    },
+    
+    "bowtie_index_archive_transcriptome":
+    {
+        "class" : "File",
+        "path": "/ifs/scratch/jorda/reference_files/GRCh38.ensembl89/GRCh38.ensembl89.transcripts_bowtie2-2.3.2.tar",
+        "metadata": {
+                "reference_genome": "GRCh38.ensembl89.transcripts"
+            }
+    },
+    
+    "bowtie_index_archive_regular_indels":[
+        {
+            "class" : "File",
+            "path": "/ifs/scratch/jorda/reference_files/GRCh38.ensembl89/GRCh38_subsampled_reg_indels_1_bowtie2-2.3.2.tar",
+            "metadata": {
+                "reference_genome": "GRCh38_subsampled_reg_indels_1"
+            }
+        },
+        {
+            "class" : "File",
+            "path": "/ifs/scratch/jorda/reference_files/GRCh38.ensembl89/GRCh38_subsampled_reg_indels_2_bowtie2-2.3.2.tar",
+            "metadata": {
+                "reference_genome": "GRCh38_subsampled_reg_indels_2"
+            }
+        },
+        {
+            "class" : "File",
+            "path": "/ifs/scratch/jorda/reference_files/GRCh38.ensembl89/GRCh38_subsampled_reg_indels_3_bowtie2-2.3.2.tar",
+            "metadata": {
+                "reference_genome": "GRCh38_subsampled_reg_indels_3"
+            }
+        },
+        {
+            "class" : "File",
+            "path": "/ifs/scratch/jorda/reference_files/GRCh38.ensembl89/GRCh38_subsampled_reg_indels_4_bowtie2-2.3.2.tar",
+            "metadata": {
+                "reference_genome": "GRCh38_subsampled_reg_indels_4"
+            }
+        },
+        {
+            "class" : "File",
+            "path": "/ifs/scratch/jorda/reference_files/GRCh38.ensembl89/GRCh38_subsampled_reg_indels_5_bowtie2-2.3.2.tar",
+            "metadata": {
+                "reference_genome": "GRCh38_subsampled_reg_indels_5"
+            }
+        }
+    ],
+    
+    "fastq_files" : [
+        {
+           "class" : "File",
+           "path": "/srv/gsfs0/projects/salzman/Roozbeh/biohub/rawdata/A18-B002588-B002588-1_S354/A18-B002588-B002588-1_S354_R1_mixed.fastq.gz",
+           "metadata": {
+               "paired_end" : "1",
+               "sample_id" : "A18-B002588-B002588-1_S354"
+           }
+        },
+        {
+           "class" : "File",
+           "path": "/srv/gsfs0/projects/salzman/Roozbeh/biohub/rawdata/A18-B002588-B002588-1_S354/A18-B002588-B002588-1_S354_R2_mixed.fastq.gz",
+           "metadata": {
+               "paired_end" : "2",
+               "sample_id" : "A18-B002588-B002588-1_S354"
+           }
+        }
+    ],
+    
+    "pickle_tar" :
+    {
+        "class" : "File",
+        "path" : "/ifs/scratch/jorda/reference_files/GRCh38.ensembl89/GRCh38_duplicate_gene_name.tar.gz" 
+    },
+    
+    "MACHETE_Known_Fusions":
+    {
+        "class" : "File",
+        "path": "/ifs/scratch/jorda/reference_files/GRCh38.ensembl89/known_fusions_bowtie2-2.3.2.tar",
+        "metadata": {
+                "reference_genome": "known_fusions"
+            }
+    },
+    
+    
+    
+    "known_fusions":
+    {
+        "class" : "File",
+        "path": "/ifs/scratch/jorda/reference_files/GRCh38.ensembl89/known_fusions_wo_knife_reg.pickle"
+        
+    },
+
+    "skip_trimming": true,
+    "window": 2000
+    
+    
+}
