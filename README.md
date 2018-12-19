@@ -11,7 +11,9 @@ This repository contains the JSON script written in Common Workflow Language (CW
 - java
 - R 3.5.1
 - Trim Galore! 0.4.4
+# sMACHETE main script
 
+All computational steps including any alignment step required for running sMACHETE has been packaged in a single JSON file "sMACHETE_pipeline.json". This script can be run on any local cluster using an input JSON file that provides the paths for reference index files and input RNA-seq file. To run the script, Rabix toolkit should be pre-installed on the local cluster.  
 # Genome files
 
 All Bowtie2 reference index files (genome, transcriptome, regular junctions, scrambled junctions, ribosome) have been pre processed and are available for human GRCh38 assembly. 
