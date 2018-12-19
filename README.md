@@ -1,6 +1,6 @@
 # sMACHETE
 
-This repository contains the json script written in Common Workflow Language (CWL) for sMACHETE, which is a precise fusion detection algorithm specially designed for screening massive RNA sequencing databases. 
+This repository contains the json script written in Common Workflow Language (CWL) for "scalable Mismatched Alignment CHimEra Tracking Engines"  (sMACHETE), which is a precise fusion detection algorithm specially designed for screening massive RNA sequencing databases. 
 
 # Required Software
 
