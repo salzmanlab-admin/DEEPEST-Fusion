@@ -31,6 +31,7 @@ All input parameters required for running sMACHETE JSON script should be provide
 - Fastq files for the input RNA-Seq data
 - Pickle files for genes/exons annotation
 - Pickle file for the known fusions list (a list of known fusions constructed based on ChimerDB 3.0 curated list of known cancer fusions)
+- Bowtie2 index files for known fusions
 
 # Toolkit for executing sMACHETE JSON script
 
