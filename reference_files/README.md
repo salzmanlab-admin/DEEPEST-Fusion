@@ -18,6 +18,16 @@ The following reference files are needed in order to run sMACHETE:
 - Bowtie2 2.2.9
 - Python 3.4 with Biopython/1.70 installed
 
+# Creating known_fusions fasta and pickle files
+
+In order to create known_fusions.fa file, please run the following command:
+    
+    cat known_fusions_*.fa > known_fusions.fa
+
+This fasta should be used to build known fusion index. In order to create known_fusions.pickle, please run the following command:
+
+    python create_pickle_file.py --fasta known_fusions.fa
+
 # Creating regular/scrambled junction fasta files
 
 In order to create regular/scrambled junction fasta files, please run the following commands:
