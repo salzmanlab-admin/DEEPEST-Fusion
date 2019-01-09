@@ -1,6 +1,6 @@
 # Building reference files
 
-The following reference files are needed in order to run sMACHETE:
+The following reference files are needed in order to run DEEPEST-Fusion:
 
 - Bowtie2 index files for the reference genome
 - Bowtie2 index files for the regular junctions
