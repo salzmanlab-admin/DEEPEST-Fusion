@@ -33,7 +33,8 @@ All input parameters required for running DEEPEST-Fusion JSON script should be p
 - Pickle file for the known fusions list (a list of known fusions constructed based on ChimerDB 3.0 curated list of known cancer fusions)
 - Bowtie2 index files for known fusions
 
-Note: Instructions for building all index and reference files are provided here: https://github.com/salzmanlab/DEEPEST-Fusion/tree/master/reference_files 
+Note: Instructions for building all index and reference files are provided here: 
+https://github.com/salzmanlab/DEEPEST-Fusion/tree/master/reference_files 
 
 # Toolkit for executing DEEPEST-Fusion JSON script
 
