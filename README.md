@@ -1,6 +1,6 @@
 # DEEPEST-Fusion
 
-This repository contains the JSON script written in Common Workflow Language (CWL) for " Data-Enriched Efficient PrEcise STatistical Fusion detection" (DEEPEST-Fusion), which is a statistical fusion detection algorithm particularly engineered for screening big RNA sequencing databases. 
+This repository contains the JSON script written in Common Workflow Language (CWL) for "Data-Enriched Efficient PrEcise STatistical Fusion detection" (DEEPEST-Fusion), which is a statistical fusion detection algorithm particularly engineered for screening big RNA sequencing databases. 
 
 # Software Requirements
 
