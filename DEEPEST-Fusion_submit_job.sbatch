@@ -23,4 +23,4 @@ pip install --user pandas
 pip install --user docopt
 pip3 install --user docopt
 pip3 install --user typing
-java -jar /srv/gsfs0/projects/salzman/jorda/bunny-1.0.5-1/rabix-cli/trim_galore_new/rabix-cli-1.0.5.jar --no-container --verbose /scratch/sMACHETE_pipeline.json /scratch/sMACHETE_input.json
+java -jar /srv/gsfs0/projects/salzman/jorda/bunny-1.0.5-1/rabix-cli/trim_galore_new/rabix-cli-1.0.5.jar --no-container --verbose /scratch/DEEPEST-Fusion_pipeline.json /scratch/DEEPEST-Fusion_input.json
