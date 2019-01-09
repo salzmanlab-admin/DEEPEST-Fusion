@@ -1,7 +1,7 @@
 #!/bin/bash
-#SBATCH --job-name=sMACHETE
-#SBATCH --output=sMACHETE.%j.out
-#SBATCH --error=sMACHETE.%j.err
+#SBATCH --job-name=DEEPEST-Fusion
+#SBATCH --output=DEEPEST-Fusion.%j.out
+#SBATCH --error=DEEPEST-Fusion.%j.err
 #SBATCH --time=24:00:00
 #SBATCH --account=horence
 #SBATCH --cpus-per-task=32
