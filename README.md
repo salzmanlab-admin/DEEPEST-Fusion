@@ -33,6 +33,8 @@ All input parameters required for running DEEPEST-Fusion JSON script should be p
 - Pickle file for the known fusions list (a list of known fusions constructed based on ChimerDB 3.0 curated list of known cancer fusions)
 - Bowtie2 index files for known fusions
 
+Note: Instructions for building all index and reference files are provided here: https://github.com/salzmanlab/DEEPEST-Fusion/tree/master/reference_files 
+
 # Toolkit for executing DEEPEST-Fusion JSON script
 
 For running DEEPEST-Fusion JSON script on a local cluster, Rabix should be installed first. Rabix is an open-source tool developed by Seven Bridges, that can be used to run a computational workflow written in Common Workflow Language (CWL) on a locul cluster. More information on how to install Rabix can be found in this GitHub repositiory: https://github.com/rabix/bunny  
