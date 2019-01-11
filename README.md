@@ -37,7 +37,7 @@ https://github.com/salzmanlab/DEEPEST-Fusion/tree/master/reference_files
 
 For running DEEPEST-Fusion JSON script on a local cluster, Rabix should be installed first. Rabix is an open-source tool developed by Seven Bridges, that can be used to run a computational workflow written in Common Workflow Language (CWL) on a locul cluster. More information on how to install Rabix can be found in this GitHub repositiory: https://github.com/rabix/bunny  
 
-# An example Batch script for running DEEPEST-Fusion on a local cluster
+# Example Batch script for running DEEPEST-Fusion on a local cluster
 
 An example batch script "DEEPEST-Fusion_submit_job.sbatch", based on job scheduler Slurm has been provided. In the batch script file the path to where Rabix has been installed, DEEPEST-Fusion pipeline JSON file (DEEPEST-Fusion_pipeline.json), and DEEPEST-Fusion input JSON file (DEEPEST-Fusion_input.json) should be provided. 
 
