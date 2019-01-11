@@ -14,9 +14,6 @@ This repository contains the JSON script written in Common Workflow Language (CW
 # DEEPEST-Fusion main script
 
 All computational steps including any alignment step required for running DEEPEST-Fusion has been packaged in a single JSON file "DEEPEST-Fusion_pipeline.json". This script can be run on any local cluster using an input JSON file that provides the paths for reference index files and input RNA-seq files. To run the script, Rabix toolkit should be pre-installed on the local cluster.  
-# Genome files
-
-All Bowtie2 reference index files (genome, transcriptome, regular junctions, scrambled junctions, ribosome) have been pre processed and are available for human GRCh38 assembly. 
 
 # Input file
 
@@ -33,7 +30,7 @@ All input parameters required for running DEEPEST-Fusion JSON script should be p
 - Pickle file for the known fusions list (a list of known fusions constructed based on ChimerDB 3.0 curated list of known cancer fusions)
 - Bowtie2 index files for known fusions
 
-Note: Instructions for building all index and reference files are provided here: 
+Note: Since index files are too large to be uploaded to githiub, we provide original reference fasta files (genome, transcriptome, regular junctions, scrambled junctions, ribosome) along with needed scripts/instructions for generating index files here: 
 https://github.com/salzmanlab/DEEPEST-Fusion/tree/master/reference_files 
 
 # Toolkit for executing DEEPEST-Fusion JSON script
@@ -47,3 +44,7 @@ An example batch script "DEEPEST-Fusion_submit_job.sbatch", based on job schedul
 # Scripts for implementing Sequence Bloom Trees for an RNA-Seq database
 
 All scripts needed for implementing Sequence Bloom Tree (SBT) filters for an RNA-Seq database can be found in this github repository: https://github.com/elehnertSBG/SBT-Apps. Mor information on the SBT algorithm and the order in which the SBT CWL scripts should be run can be found in the original SBT manual: https://www.cs.cmu.edu/~ckingsf/software/bloomtree/sbt-manual.pdf 
+
+# Contact
+
+If you have any questions, please contact either Roozbeh Dehghannasiri (rdehghan@stanford.edu) or Milos Jordanski (milos.jordanski@stanford.edu).
