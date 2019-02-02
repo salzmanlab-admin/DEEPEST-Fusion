@@ -43,7 +43,7 @@ An example batch script "DEEPEST-Fusion_submit_job.sbatch", based on job schedul
 
 # Output files
 
-Three primary report files containing reported fusion junction with their corresponding statsitical scores and number of various types of aligned reads can be found under:
+Three primary report files containing reported fusion junction with their corresponding statsitical scores and number of various types of aligned reads can be found as follows:
 
 - modified-MACHETE report file (based on FarJunctions database): Knife_and_MACHETE_Known_fusions_parallel_rev_\*/root/KNIFE_GLM_model/\[Dataset name\]\_1\_circJuncProbs.txt_cdf
 - modified-MACHETE report file (based on known fusion database): Knife_and_MACHETE_Known_fusions_parallel_rev_\*/root/MACHETE_AppendNaiveReptParallel_Known/\[Dataset name\]\_naive_report_Appended_MACHETE_Parallel\_Known.txt
