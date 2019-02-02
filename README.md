@@ -2,7 +2,7 @@
 
 This repository contains the JSON script written in Common Workflow Language (CWL) for "Data-Enriched Efficient PrEcise STatistical Fusion detection" (DEEPEST-Fusion), which is a statistical fusion detection algorithm particularly engineered for screening big RNA sequencing databases. 
 
-# Software Requirements
+# Software requirements
 
 - Anaconda
 - SciPy 1.1.0
@@ -37,13 +37,24 @@ https://github.com/salzmanlab/DEEPEST-Fusion/tree/master/reference_files
 
 For running DEEPEST-Fusion JSON script on a local cluster, Rabix should be installed first. Rabix is an open-source tool developed by Seven Bridges, that can be used to run a computational workflow written in Common Workflow Language (CWL) on a locul cluster. More information on how to install Rabix can be found in this GitHub repositiory: https://github.com/rabix/bunny  
 
-# Example Batch script for running DEEPEST-Fusion on a local cluster
+# Example batch script for running DEEPEST-Fusion on a local cluster
 
 An example batch script "DEEPEST-Fusion_submit_job.sbatch", based on job scheduler Slurm has been provided. In the batch script file the path to where Rabix has been installed, DEEPEST-Fusion pipeline JSON file (DEEPEST-Fusion_pipeline.json), and DEEPEST-Fusion input JSON file (DEEPEST-Fusion_input.json) should be provided. 
 
-# CWL Scripts for implementing Sequence Bloom Trees
+# Output files
+
+Three primary report files containing reported fusion junction with their corresponding statsitical scores and number of various types of aligned reads can be found under:
+
+- modified-MACHETE report file (based on FarJunctions database): Knife_and_MACHETE_Known_fusions_parallel_rev_\*/root/KNIFE_GLM_model/\[Dataset name\]\_1\_circJuncProbs.txt_cdf
+- modified-MACHETE report file (based on known fusion database): Knife_and_MACHETE_Known_fusions_parallel_rev_\*/root/MACHETE_AppendNaiveReptParallel_Known/\[Dataset name\]\_naive_report_Appended_MACHETE_Parallel\_Known.txt
+- KNIFE report file: Knife_and_MACHETE_Known_fusions_parallel_rev_\*/root/MACHETE_AppendNaiveReptParallel/\[Dataset name\]\_naive_report_AppendedMACHETE\_Parallel.txt
+
+In each report file, high quality junctions are called by imposing thresholds on the statistical scores (as described in the paper). The list of reported fusion junctions which is the output of the junction nomination component (first computational component in DEEPEST-Fusion) is the union of fusion junctions called from these 3 report files. This list of reported fusions should then undergo the statistical refinement step (the second componenet of DEEPEST-Fusion) which is based on Sequence Bloom Trees.
+
+# CWL scripts for implementing Sequence Bloom Trees
 
 All scripts needed for implementing Sequence Bloom Tree (SBT) filters for an RNA-Seq database can be found in this github repository: https://github.com/elehnertSBG/SBT-Apps. Mor information on the SBT algorithm and the order in which the SBT CWL scripts should be run can be found in the original SBT manual: https://www.cs.cmu.edu/~ckingsf/software/bloomtree/sbt-manual.pdf 
+
 
 # Contact
 
