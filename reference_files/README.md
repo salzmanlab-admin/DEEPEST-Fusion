@@ -12,7 +12,8 @@ DEEPEST-Fusion needs the following index files:
 - Pickle file for the known fusions list (a list of known fusions constructed based on ChimerDB 3.0 curated list of known cancer fusions)
 - Bowtie2 index files for known fusions
 
-We provide two options for index files: 1- downloading a tar folder containing all ready-to-use bowtie2 index files based on human genome build hg38 directly from (file size: 152 GB): https://drive.google.com/open?id=1ftT5UjKafcsDzUFlV49szOD8SiH3-Qws
+We provide two options for index files: 
+1- downloading a tar folder containing all ready-to-use bowtie2 index files based on human genome build hg38 directly from (file size: 152 GB): https://drive.google.com/open?id=1ftT5UjKafcsDzUFlV49szOD8SiH3-Qws
 2- follow the instructions below to build the index files:   
 # Software Requirements
 
