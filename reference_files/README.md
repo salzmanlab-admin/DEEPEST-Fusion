@@ -1,6 +1,6 @@
 # Building index files needed for DEEPEST-Fusion
 
-The following reference files are needed in order to run DEEPEST-Fusion:
+DEEPEST-Fusion needs the following index files:
 
 - Bowtie2 index files for the reference genome
 - Bowtie2 index files for the regular junctions
