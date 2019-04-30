@@ -1,4 +1,4 @@
-# Building reference files
+# Building index files needed for DEEPEST-Fusion
 
 The following reference files are needed in order to run DEEPEST-Fusion:
 
@@ -7,13 +7,13 @@ The following reference files are needed in order to run DEEPEST-Fusion:
 - Bowtie2 index files for the scrambled junctions
 - Bowtie2 index files for ribosome
 - Bowtie2 index files for the transcriptome
-- Bowtie2 index files for indel junctions (for junctions with up to 5 symmetric indels at the splice site)
+- Bowtie2 index files for indel junctions (up to 5 symmetric indels at the splice site)
 - Pickle files for genes/exons annotation
 - Pickle file for the known fusions list (a list of known fusions constructed based on ChimerDB 3.0 curated list of known cancer fusions)
 - Bowtie2 index files for known fusions
 
-We provide two options for the reference files: 1- downloading a tar folder containing all ready-to-use bowtie2 index files for reference files based on hg38, can be downloaded directly (152 GB) from: https://drive.google.com/open?id=1ftT5UjKafcsDzUFlV49szOD8SiH3-Qws
-2- The other option is to follow the following instructions to build the index files:   
+We provide two options for index files: 1- downloading a tar folder containing all ready-to-use bowtie2 index files based on human genome build hg38 directly from (file size: 152 GB): https://drive.google.com/open?id=1ftT5UjKafcsDzUFlV49szOD8SiH3-Qws
+2- follow the instructions below to build the index files:   
 # Software Requirements
 
 - Bowtie2 2.2.9
