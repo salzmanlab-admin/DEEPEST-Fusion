@@ -14,9 +14,9 @@ DEEPEST-Fusion needs the following index files:
 
 We provide two options for index files: 
 
-1- downloading a tar folder containing all ready-to-use bowtie2 index files based on human genome build hg38 directly from (file size: 152 GB): https://drive.google.com/open?id=1ftT5UjKafcsDzUFlV49szOD8SiH3-Qws
+    1- downloading a tar folder containing all ready-to-use bowtie2 index files based on human genome build hg38 directly from (file size: 152 GB): https://drive.google.com/open?id=1ftT5UjKafcsDzUFlV49szOD8SiH3-Qws
 
-2- follow the instructions below to build the index files:   
+    2- follow the instructions below to build the index files:   
 # Software Requirements
 
 - Bowtie2 2.2.9
