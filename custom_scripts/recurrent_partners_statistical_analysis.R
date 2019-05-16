@@ -4,36 +4,26 @@ require(compare)
 library(dplyr)
 library(DescTools)
 
-######################## Inputs ###################
-# five_prime_recurrent_file = "/scratch/PI/horence/Roozbeh/TCGA_Project/consolidated_files/five_prime_recurrent_genes.txt"
-# three_prime_recurrent_file = "/scratch/PI/horence/Roozbeh/TCGA_Project/consolidated_files/three_prime_recurrent_genes.txt"
-# TCGA_fusions_with_id_file = "/scratch/PI/horence/Roozbeh/TCGA_Project/consolidated_files/TCGA_fusions_smachete_knife_with_ID.txt"
-# COSMIC_genes_file = "/scratch/PI/horence/Roozbeh/TCGA_Project/systems_biology_files/cancer_gene_census.csv"
-# GTEx_blood_smachete_fusions_file = "/scratch/PI/horence/Roozbeh/TCGA_Project/utility_files/smachete_after_SBT_GTEx_BLOOD.txt"
-# GTEx_ovary_smachete_fusions_file = "/scratch/PI/horence/Roozbeh/TCGA_Project/utility_files/smachete_after_SBT_GTEx_OVARY.txt" 
-# GTEx_ovary_knife_fusions_file = "/scratch/PI/horence/Roozbeh/TCGA_Project/utility_files/knife_after_SBT_GTEx_OVARY.txt"
-# GTEx_blood_knife_fusions_file = "/scratch/PI/horence/Roozbeh/TCGA_Project/utility_files/knife_after_SBT_GTEx_BLOOD.txt"
-# GTEx_brain_smachete_fusions_file = "/scratch/PI/horence/Roozbeh/TCGA_Project/utility_files/smachete_after_SBT_GTEx_BRAIN.txt" 
-# GTEx_brain_knife_fusions_file = "/scratch/PI/horence/Roozbeh/TCGA_Project/utility_files/knife_after_SBT_GTEx_BRAIN.txt"
-######################################################
+#All input files are available in DEEPEST-Fusion Github repository, custom scripts folder at: https://github.com/salzmanlab/DEEPEST-Fusion/tree/master/custom_scripts/files 
 
-######################## Inputs (local PC) ###################
-five_prime_recurrent_file = "G:\\My Drive\\Postdoc_Research\\Projects\\TCGA_sMACHETE\\consolidated_files\\five_prime_recurrent_genes.txt"
-three_prime_recurrent_file = "G:\\My Drive\\Postdoc_Research\\Projects\\TCGA_sMACHETE\\consolidated_files\\three_prime_recurrent_genes.txt"
-TCGA_fusions_with_id_file = "G:\\My Drive\\Postdoc_Research\\Projects\\TCGA_sMACHETE\\consolidated_files\\TCGA_fusions_smachete_knife_with_ID.txt"
-COSMIC_genes_file = "G:\\My Drive\\Postdoc_Research\\Projects\\TCGA_sMACHETE\\systems_biology_files\\cancer_gene_census.csv"
-GTEx_blood_smachete_fusions_file = "G:\\My Drive\\Postdoc_Research\\Projects\\TCGA_sMACHETE\\utility_files\\smachete_after_SBT_GTEx_BLOOD.txt"
-GTEx_ovary_smachete_fusions_file = "G:\\My Drive\\Postdoc_Research\\Projects\\TCGA_sMACHETE\\utility_files\\smachete_after_SBT_GTEx_OVARY.txt"
-GTEx_ovary_knife_fusions_file = "G:\\My Drive\\Postdoc_Research\\Projects\\TCGA_sMACHETE\\utility_files\\knife_after_SBT_GTEx_OVARY.txt"
-GTEx_blood_knife_fusions_file = "G:\\My Drive\\Postdoc_Research\\Projects\\TCGA_sMACHETE\\utility_files\\knife_after_SBT_GTEx_BLOOD.txt"
-GTEx_brain_smachete_fusions_file = "G:\\My Drive\\Postdoc_Research\\Projects\\TCGA_sMACHETE\\utility_files\\smachete_after_SBT_GTEx_BRAIN.txt"
-GTEx_brain_knife_fusions_file = "G:\\My Drive\\Postdoc_Research\\Projects\\TCGA_sMACHETE\\utility_files\\knife_after_SBT_GTEx_BRAIN.txt"
+
+######################## Inputs files ###################
+five_prime_recurrent_file = "DEEPEST-Fusion/custom_scripts/files/five_prime_recurrent_genes.txt"
+three_prime_recurrent_file = "DEEPEST-Fusion/custom_scripts/files/three_prime_recurrent_genes.txt"
+DEEPEST_fusions_with_ID_file = "DEEPEST-Fusion/custom_scripts/files/DEEPEST_fusions_with_ID.txt"
+COSMIC_genes_file = "DEEPEST-Fusion/custom_scripts/files/cancer_gene_census.csv"
+GTEx_blood_smachete_fusions_file = "DEEPEST-Fusion/custom_scripts/files/smachete_after_SBT_GTEx_BLOOD.txt"
+GTEx_ovary_smachete_fusions_file = "DEEPEST-Fusion/custom_scripts/files/smachete_after_SBT_GTEx_OVARY.txt"
+GTEx_ovary_knife_fusions_file = "DEEPEST-Fusion/custom_scripts/files/knife_after_SBT_GTEx_OVARY.txt"
+GTEx_blood_knife_fusions_file = "DEEPEST-Fusion/custom_scripts/files/knife_after_SBT_GTEx_BLOOD.txt"
+GTEx_brain_smachete_fusions_file = "DEEPEST-Fusion/custom_scripts/files/smachete_after_SBT_GTEx_BRAIN.txt"
+GTEx_brain_knife_fusions_file = "DEEPEST-Fusion/custom_scripts/files/knife_after_SBT_GTEx_BRAIN.txt"
 #####################################################
 
-####read in input files########
+#### read in input files ########
 five_prime_genes = fread(five_prime_recurrent_file,header = TRUE,sep = "\t")   #genes that have partnerd with many genes as five_prime genes in the fusions
 three_prime_genes = fread(three_prime_recurrent_file,header = TRUE,sep = "\t")
-TCGA_fusions_with_id = fread(TCGA_fusions_with_id_file,header = TRUE,sep = "\t")
+DEEPEST_fusions_with_ID = fread(DEEPEST_fusions_with_ID_file,header = TRUE,sep = "\t")
 cosmic_genes = fread(COSMIC_genes_file,sep = ",",header = TRUE)
 GTEx_ovary_smachete_fusions = fread(GTEx_ovary_smachete_fusions_file,sep="\t",header = TRUE)
 GTEx_ovary_knife_fusions = fread(GTEx_ovary_knife_fusions_file,header = TRUE,sep="\t")
@@ -51,15 +41,16 @@ GTEx_ovary_knife_fusions[,junction:=gsub("([|])",":",junction),by=1:nrow(GTEx_ov
 GTEx_ovary_knife_fusions[,fusion:=paste(strsplit(junction,split = ":")[[1]][2],strsplit(junction,split = ":")[[1]][4],sep="--"),by=1:nrow(GTEx_ovary_knife_fusions)]
 ###############################
 
+
 GTEx_fusions = rbind(GTEx_blood_knife_fusions[,list(sample_name,fusion,type)],GTEx_brain_knife_fusions[,list(sample_name,fusion,type)],GTEx_ovary_knife_fusions[,list(sample_name,fusion,type)],GTEx_brain_smachete_fusions[,list(sample_name,fusion,type)],GTEx_blood_smachete_fusions[,list(sample_name,fusion,type)],GTEx_ovary_smachete_fusions[,list(sample_name,fusion,type)])
 GTEx_fusions[,gene1 := strsplit(fusion,split="--")[[1]][1],by=1:nrow(GTEx_fusions)]
 GTEx_fusions[,gene2 := strsplit(fusion,split="--")[[1]][2],by=1:nrow(GTEx_fusions)]
-TCGA_fusions_with_id[,pos1:=as.numeric(strsplit(junction,split = ":",fixed = TRUE)[[1]][3]),by=1:nrow(TCGA_fusions_with_id)]
-TCGA_fusions_with_id[,pos2:=as.numeric(strsplit(junction,split = ":",fixed = TRUE)[[1]][7]),by=1:nrow(TCGA_fusions_with_id)]
-TCGA_fusions_with_id[,junc:=strsplit(junction,split = ":",fixed = TRUE)[[1]][9],by=1:nrow(TCGA_fusions_with_id)]
-TCGA_fusions_with_id[,type:="machete"]
-TCGA_fusions_with_id[junc=="rev"&abs(pos1-pos2) < 1000000,type:="knife"]
-TCGA_fusions_unique = unique(TCGA_fusions_with_id[,list(sample_name,fusion_unified)])
+DEEPEST_fusions_with_ID[,pos1:=as.numeric(strsplit(junction,split = ":",fixed = TRUE)[[1]][3]),by=1:nrow(DEEPEST_fusions_with_ID)]
+DEEPEST_fusions_with_ID[,pos2:=as.numeric(strsplit(junction,split = ":",fixed = TRUE)[[1]][7]),by=1:nrow(DEEPEST_fusions_with_ID)]
+DEEPEST_fusions_with_ID[,junc:=strsplit(junction,split = ":",fixed = TRUE)[[1]][9],by=1:nrow(DEEPEST_fusions_with_ID)]
+DEEPEST_fusions_with_ID[,type:="machete"]
+DEEPEST_fusions_with_ID[junc=="rev"&abs(pos1-pos2) < 1000000,type:="knife"]
+TCGA_fusions_unique = unique(DEEPEST_fusions_with_ID[,list(sample_name,fusion_unified)])
 num_each_fusion = TCGA_fusions_unique[,.N,by=fusion_unified]
 setnames(num_each_fusion,"N","occurrence")
 
@@ -76,14 +67,14 @@ fusions_recurrent = setorder(fusions_recurrent,-occurrence)
 dist_fusions = fusions_recurrent[,.N,by=occurrence]
 
 
-num_fusions = nrow(unique(TCGA_fusions_with_id[,list(sample_name,fusion_unified)]))   #total number of detected fusions 
-num_all_five_prime_genes = length(unique(TCGA_fusions_with_id$gene1))   #total number of 5' genes in the detected fusions
-num_all_three_prime_genes = length(unique(TCGA_fusions_with_id$gene2))
+num_fusions = nrow(unique(DEEPEST_fusions_with_ID[,list(sample_name,fusion_unified)]))   #total number of detected fusions 
+num_all_five_prime_genes = length(unique(DEEPEST_fusions_with_ID$gene1))   #total number of 5' genes in the detected fusions
+num_all_three_prime_genes = length(unique(DEEPEST_fusions_with_ID$gene2))
 num_distinct_fusions =length(unique(TCGA_fusions_unique$fusion_unified))
 
 #################################################################################
 #################################################################################
-####################Compute p-value for the distribution of recurrent genes#####
+#################### Compute p-value for the number of recurrent genes #####
 
 #first for recurrent 5' genes
 n = 20000
@@ -113,14 +104,11 @@ for (counter in 2:nrow(dist_five_prime_partners)){
   prob_three_prime_genes =  prob_three_prime_genes + log10(ppois(dist_five_prime_partners$N[counter]-1, t^c/factorial(c), log = FALSE,lower.tail = FALSE))
 }
 
-################################################################################
-################################################################################
-##############################################################################
 
 
 #########################################################################################################
 #########################################################################################################
-########Compute CI and expected number of recurrent genes for each number of c (minimum number of partners) basedon BHY FDR control
+########Compute CI and expected number of recurrent genes for each number of c (minimum number of partners) based on BHY FDR control
 
 
 ######first five prime recurrent genes
@@ -198,12 +186,6 @@ k = 1
 upper_CI_recurrent_fusions = c()  #upper CI based on qpois command 
 expected_freq_recurrent_fusions = c()
 
-#all_dist_fusions = data.table(occurrence=182:2)
-#all_dist_fusions = merge(all_dist_fusions,dist_fusions,by.x="occurrence",by.y="occurrence",all.x=TRUE,all.y=FALSE)
-#all_dist_fusions[is.na(N),N:=0]
-#all_dist_fusions = setorder(all_dist_fusions,-occurrence)
-#dist_fusions = all_dist_fusions
-
 k = 0
 for (counter in 1:nrow(dist_fusions)){
   n = 20000*(20000-1)
@@ -247,7 +229,7 @@ gtex_samples_nonextreme_fraction = c()
 for (k in 1:45){
   significant_five_prime_recurrent_genes[[k]] = five_prime_genes[num_three_prime_partners >= num_partners[k]]$all_gene1
   significant_three_prime_recurrent_genes[[k]] = three_prime_genes[num_five_prime_partners >= num_partners[k]]$all_gene2
-  tcga_fusions_with_significant_recurrent_genes[[k]] = unique(TCGA_fusions_with_id[(gene1_unified%in%significant_five_prime_recurrent_genes[[k]]) |(gene2_unified%in%significant_three_prime_recurrent_genes[[k]])])
+  tcga_fusions_with_significant_recurrent_genes[[k]] = unique(DEEPEST_fusions_with_ID[(gene1_unified%in%significant_five_prime_recurrent_genes[[k]]) |(gene2_unified%in%significant_three_prime_recurrent_genes[[k]])])
   tcga_fusions_extreme_fraction[k]=nrow(unique(tcga_fusions_with_significant_recurrent_genes[[k]][type=="machete",list(sample_name,fusion)])) / nrow(unique(tcga_fusions_with_significant_recurrent_genes[[k]][,list(sample_name,fusion)]))
   tcga_samples_extreme_fraction[k]=nrow(unique(tcga_fusions_with_significant_recurrent_genes[[k]][type=="machete",list(sample_name)])) / 9946*100
   tcga_samples_nonextreme_fraction[k]=nrow(unique(tcga_fusions_with_significant_recurrent_genes[[k]][type=="knife",list(sample_name)])) / 9946*100
@@ -284,9 +266,6 @@ points(num_partners,num_sig_gtex_samples,pch=19,cex.lab=1.3,col="darkorange")
 legend(x = 34, y = 46, legend = c("TCGA tumor","GTEx"), pch = c(19,19), col = c("darkcyan", "darkorange"),cex=1)
 
 
-#write.table(fusions_with_significant_recurrent_genes,"G:\\My Drive\\Postdoc_Research\\Projects\\TCGA_sMACHETE\\consolidated_files\\fusions_with_significant_recurrent_genes.txt",quote = FALSE,row.names = FALSE,sep="\t")
-#write.table(significant_recurrent_genes,"G:\\My Drive\\Postdoc_Research\\Projects\\TCGA_sMACHETE\\consolidated_files\\significant_recurrent_genes.txt",quote = FALSE,row.names = FALSE,sep="\t")
-
 ###################################################################################
 ####################################################################################
 ##################Plotting the results############################################
@@ -303,11 +282,6 @@ legend(x = 43, y = 15000, legend = c("5' Recurrent genes","3' Recurrent genes","
 axis(2,las=1,at=marks,labels=marks_labels)
 axis(1,at=marks_x,labels=marks_x)
 
-#plotting the histograms of the distributions of the numbers of 5' and 3' partners
-#hist(five_prime_genes$num_three_prime_partners, breaks=seq(0,65,l=66),xlab="Number of three prime partners",ylab="Fraction",freq = FALSE, col="lightblue",ylim = c(0,0.5),main="")
-#text(45,0.4, bquote(p<10^-322), col = 1,cex=1.4)
-#hist(three_prime_genes$num_five_prime_partners, breaks=seq(0,41,l=42),xlab="Number of five prime partners",ylab="Fraction",freq = FALSE, col="lightblue",ylim = c(0,0.6),main="")
-#text(30,0.5,  bquote(p<10^-843), col = 1,cex=1.4)
 
 #plot the graph for the recurrent fusions graph
 marks = c(0.01,0.1,1,10,100,1000,10000)
