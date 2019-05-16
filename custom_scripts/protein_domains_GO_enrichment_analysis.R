@@ -5,25 +5,24 @@ library(plyr)
 library(dplyr)
 library(dcGOR)
 
-####### Inputs ############
-#enriched_single_domains_file = "/scratch/PI/horence/Roozbeh/TCGA_Project/consolidated_files/enriched_fusion_single_domain.txt" 
-#enriched_domain_pairs_file =   "/scratch/PI/horence/Roozbeh/TCGA_Project/consolidated_files/enriched_fusion_domain_pair.txt"
-#Pfam_A_hmm_file = "/scratch/PI/horence/Roozbeh/TCGA_Project/utility_files/Pfam-A.hmm.dat"
+#All input files are available in DEEPEST-Fusion Github repository, custom scripts folder at: https://github.com/salzmanlab/DEEPEST-Fusion/tree/master/custom_scripts/files 
+
+####### Inputs files ############
+enriched_single_domains_file = "DEEPEST-Fusion/custom_scripts/files/enriched_fusion_single_domain.txt" 
+enriched_domain_pairs_file =   "DEEPEST-Fusion/custom_scripts/files/enriched_fusion_domain_pair.txt"
+Pfam_A_hmm_file = "DEEPEST-Fusion/custom_scripts/files/Pfam-A.hmm.dat"
 ######################################
 
-####### Inputs (local PC) ############
-enriched_single_domains_file = "G:\\My Drive\\Postdoc_Research\\Projects\\TCGA_sMACHETE\\consolidated_files\\enriched_fusion_single_domain.txt" 
-enriched_domain_pairs_file =   "G:\\My Drive\\Postdoc_Research\\Projects\\TCGA_sMACHETE\\consolidated_files\\enriched_fusion_domain_pair.txt"
-Pfam_A_hmm_file = "G:\\My Drive\\Postdoc_Research\\Projects\\TCGA_sMACHETE\\utility_files\\Pfam-A.hmm.dat"
-######################################
-
-##read in input files
+###### read in input files ####################
 enriched_single_domains = fread(enriched_single_domains_file,header = TRUE,sep="\t")
 enriched_domain_pairs_file = fread(enriched_domain_pairs_file,header = TRUE,sep="\t")
 Pfam_A_hmm = fread(Pfam_A_hmm_file,sep="\t",header = FALSE)    # we extract the pfam_ids and pfa_names based on this files
+################################################
+
+
 
 ########################################################
-##############building a data frame that pairs each pfam_id with its corresponding pfam_name
+############## building a data frame that pairs each pfam_id with its corresponding pfam_name
 PF_ids = Pfam_A_hmm[V1%like%"#=GF AC"]    
 PF_names = Pfam_A_hmm[V1%like%"#=GF ID"]
 PF_description = Pfam_A_hmm[V1%like%"#=GF DE"]
@@ -48,4 +47,4 @@ eoutput_BY_hyper = dcEnrichment(enriched_single_domains$Pfam_id, domain="Pfam", 
 
 Biological_processes_GO_analysis_fusion_domains=data.table(view(eoutput_BY_binom, top_num=1000, sortBy="pvalue", details=TRUE))
 Biological_processes_GO_analysis_fusion_domains[,fold_enrichement:=nOverlap/nGroup/(nAnno/3241),by=1:nrow(Biological_processes_GO_analysis_fusion_domains)]
-write.table(Biological_processes_GO_analysis_fusion_domains,"G:\\My Drive\\Postdoc_Research\\Projects\\TCGA (sMACHETE)\\consolidated_files\\GO_analysis_for_enriched_fusion_domains.txt",quote = FALSE,row.names = FALSE,sep="\t")
+write.table(Biological_processes_GO_analysis_fusion_domains,"GO_analysis_for_enriched_fusion_domains.txt",quote = FALSE,row.names = FALSE,sep="\t")
