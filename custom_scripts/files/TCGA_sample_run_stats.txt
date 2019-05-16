@@ -1,0 +1,37 @@
+Project	Disease-Type	case	total_samples	total_machete_samples	tumor_samples	machete_tumore_samples	normal_samples	machete_normal_samples	SBT_samples	total_knife_samples
+TCGA_ACC	Adrenocortical Carcinoma	79	79	79	79	79	0	0	79	79  
+TCGA_BLCA	Bladder Urothelial Carcinoma	408	433	433	414	414	19	19	433	433
+TCGA_BRCA	Breast Invasive Carcinoma	1095	1256	1231	1136	1118	114	113	1256	1231
+TCGA_CESC	Cervical Squamous Cell Carcinoma and Endocervical Adenocarcinoma	304	309	309	306	306	3	3	309	309
+TCGA_CHOL	Cholangiocarcinoma	36	45	45	36	36	9	9	45	45
+TCGA_COAD	Colon Adenocarcinoma	458	546	351	505	310	41	41	543	351
+TCGA_DLBC	Lymphoid Neoplasm Diffuse Large B-cell Lymphoma	48	48	48	48	48	0	0	48	48
+TCGA_ESCA	Esophageal Carcinoma	184	198	198	185	185	13	13	198	58
+TCGA_GBM	Glioblastoma Multiform	167	175	175	170	170	5	5	175	39
+TCGA_HNSC	Head and Neck Squamous Cell Carcinoma	521	566	566	522	522	44	44	548	566 
+TCGA_KICH	Kidney Chromophobe	66	91	91	66	66	25	25	91	91
+TCGA_KIRC	Kidney Renal Clear Cell Carcinoma	533	618	541	546	541	72	0	618	541
+TCGA_KIRP	Kidney Renal Papillary Cell Carcinoma	290	323	290	291	290	32	0	323	290
+TCGA_LAML	Acute Myeloid Leukemia	179	179	175	179	175	0	0	179	51
+TCGA_LGG	Brain Lower Grade Glioma	516	534	534	534	534	0	0	532	534
+TCGA_LIHC	Liver Hepatocellular Carcinoma 	371	424	373	374	373	50	0	424	373
+TCGA_LUAD	Lung Adenocarcinoma	517	601	599	542	541	59	58	601	599
+TCGA_LUSC	Lung Squamous Cell Carcinoma	501	555	556	504	505	51	51	555	556
+TCGA_MESO	Mesothelioma	87	87	87	87	87	0	0	87	87
+TCGA_OV	Ovarian Serous Cystadenocarcinoma	423	430	430	430	430	0	0	430	139
+TCGA_PAAD	Pancreatic Adenocarcinoma	178	183	179	179	179	4	4	183	179
+TCGA_PCPG	Pheochromocytoma and Paraganglioma	179	187	187	184	184	3	3	187	187
+TCGA_PRAD	Prostate Adenocarcinoma	497	558	553	506	501	52	52	558	553
+TCGA_READ	Rectum Adenocarcinoma	167	177	105	167	95	10	10	105	105
+TCGA_SARC	Sarcoma	259	265	265	263	263	2	2	265	265
+TCGA_SKCM	Skin Cutaneous Melanoma	469	473	473	472	472	1	1	473	473
+TCGA_STAD	Stomach Adenocarcinoma	419	453	452	416	415	37	37	454	116
+TCGA_TGCT	Testicular Germ Cell Tumors	150	156	156	156	156	0	0	156	156
+TCGA_THCA	Thyroid Carcinoma	505	572	572	513	513	59	59	572	572
+TCGA_THYM	Thymoma	120	122	122	120	120	2	2	122	122
+TCGA_UCEC	Uterine Corpus Endometrial Carcinoma	557	593	209	558	185	35	24	589	209
+TCGA_UCS	Uterine Carcinosarcoma	57	57	57	57	57	0	0	57	57
+TCGA_UVM	Uveal Melanoma	80	80	80	80	80	0	0	80	80
+TCGA_ALL	All Cancers	10420	11373	10521	10625	9950	742	575	11275	9494
+GTEx_BLOOD	GTEX BLOOD	50	50	50	0	0	50	50	50	0
+GTEx_OVARY	GTEX OVARY	108	108	104	0	0	104	104	108	0
