@@ -14,6 +14,7 @@ The provided custom scripts in this folder have been used to perform downstream 
 # Description of scripts:
 
 - tp53_analysis.R: this script identifies the correlation between the abudnance of fusions and TP53 mutation rate as two orthogonal measures of genomic instability. In addition to DEEPEST, the script calculates the correlation coefficients for TumorFusions and (Gao et al., 2018) studies as well (correspondin to the results in Figure 2A). 
+
 - kinase_cosmic_analysis.R: this script performs a statistical analysis to identify TCGA tumor types with high enrichment for fusions involving kinase or COSMIC genes (corresponding to the results presented in Figure 2B and 5A in the paper)
 
 - recurrent_partners_statistical_analysis.R: this script performs the statistical analysis based on generalized birthday problem to find significantly-fused genes and also show the recurrent fusions are highly enriched in fuions. Then it compares the distinct profiles of significantly fused genes in TCGA and GTEx samples (corresponding to results in Figure 4).   
