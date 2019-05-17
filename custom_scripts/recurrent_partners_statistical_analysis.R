@@ -12,12 +12,7 @@ five_prime_recurrent_file = "DEEPEST-Fusion/custom_scripts/files/five_prime_recu
 three_prime_recurrent_file = "DEEPEST-Fusion/custom_scripts/files/three_prime_recurrent_genes.txt"
 DEEPEST_fusions_with_ID_file = "DEEPEST-Fusion/custom_scripts/files/DEEPEST_fusions_with_ID.txt"
 COSMIC_genes_file = "DEEPEST-Fusion/custom_scripts/files/cancer_gene_census.csv"
-GTEx_blood_smachete_fusions_file = "DEEPEST-Fusion/custom_scripts/files/smachete_after_SBT_GTEx_BLOOD.txt"
-GTEx_ovary_smachete_fusions_file = "DEEPEST-Fusion/custom_scripts/files/smachete_after_SBT_GTEx_OVARY.txt"
-GTEx_ovary_knife_fusions_file = "DEEPEST-Fusion/custom_scripts/files/knife_after_SBT_GTEx_OVARY.txt"
-GTEx_blood_knife_fusions_file = "DEEPEST-Fusion/custom_scripts/files/knife_after_SBT_GTEx_BLOOD.txt"
-GTEx_brain_smachete_fusions_file = "DEEPEST-Fusion/custom_scripts/files/smachete_after_SBT_GTEx_BRAIN.txt"
-GTEx_brain_knife_fusions_file = "DEEPEST-Fusion/custom_scripts/files/knife_after_SBT_GTEx_BRAIN.txt"
+DEEPEST_SBT_GTEx_hits_file = "DEEPEST-Fusion/custom_scripts/files/DEEPEST_SBT_GTEx_hits.txt"
 #####################################################
 
 #### read in input files ########
@@ -25,26 +20,12 @@ five_prime_genes = fread(five_prime_recurrent_file,header = TRUE,sep = "\t")   #
 three_prime_genes = fread(three_prime_recurrent_file,header = TRUE,sep = "\t")
 DEEPEST_fusions_with_ID = fread(DEEPEST_fusions_with_ID_file,header = TRUE,sep = "\t")
 cosmic_genes = fread(COSMIC_genes_file,sep = ",",header = TRUE)
-GTEx_ovary_smachete_fusions = fread(GTEx_ovary_smachete_fusions_file,sep="\t",header = TRUE)
-GTEx_ovary_knife_fusions = fread(GTEx_ovary_knife_fusions_file,header = TRUE,sep="\t")
-GTEx_blood_knife_fusions = fread(GTEx_blood_knife_fusions_file,header = TRUE,sep="\t")
-GTEx_brain_smachete_fusions = fread(GTEx_brain_smachete_fusions_file,sep="\t",header = TRUE)
-GTEx_brain_knife_fusions = fread(GTEx_brain_knife_fusions_file,header = TRUE,sep="\t")
-GTEx_blood_smachete_fusions = fread(GTEx_blood_smachete_fusions_file,sep="\t",header = TRUE)
-GTEx_blood_smachete_fusions[,type:="machete"]
-GTEx_ovary_smachete_fusions[,type:="machete"]
-GTEx_brain_smachete_fusions[,type:="machete"]
-GTEx_blood_knife_fusions[,type:="knife"]
-GTEx_ovary_knife_fusions[,type:="knife"]
-GTEx_brain_knife_fusions[,type:="knife"]
-GTEx_ovary_knife_fusions[,junction:=gsub("([|])",":",junction),by=1:nrow(GTEx_ovary_knife_fusions)]
-GTEx_ovary_knife_fusions[,fusion:=paste(strsplit(junction,split = ":")[[1]][2],strsplit(junction,split = ":")[[1]][4],sep="--"),by=1:nrow(GTEx_ovary_knife_fusions)]
+DEEPEST_SBT_GTEx_hits = fread(DEEPEST_SBT_GTEx_hits_file,sep="\t",header = TRUE)
 ###############################
 
 
-GTEx_fusions = rbind(GTEx_blood_knife_fusions[,list(sample_name,fusion,type)],GTEx_brain_knife_fusions[,list(sample_name,fusion,type)],GTEx_ovary_knife_fusions[,list(sample_name,fusion,type)],GTEx_brain_smachete_fusions[,list(sample_name,fusion,type)],GTEx_blood_smachete_fusions[,list(sample_name,fusion,type)],GTEx_ovary_smachete_fusions[,list(sample_name,fusion,type)])
-GTEx_fusions[,gene1 := strsplit(fusion,split="--")[[1]][1],by=1:nrow(GTEx_fusions)]
-GTEx_fusions[,gene2 := strsplit(fusion,split="--")[[1]][2],by=1:nrow(GTEx_fusions)]
+DEEPEST_SBT_GTEx_hits[,gene1 := strsplit(fusion,split="--")[[1]][1],by=1:nrow(DEEPEST_SBT_GTEx_hits)]
+DEEPEST_SBT_GTEx_hits[,gene2 := strsplit(fusion,split="--")[[1]][2],by=1:nrow(DEEPEST_SBT_GTEx_hits)]
 DEEPEST_fusions_with_ID[,pos1:=as.numeric(strsplit(junction,split = ":",fixed = TRUE)[[1]][3]),by=1:nrow(DEEPEST_fusions_with_ID)]
 DEEPEST_fusions_with_ID[,pos2:=as.numeric(strsplit(junction,split = ":",fixed = TRUE)[[1]][7]),by=1:nrow(DEEPEST_fusions_with_ID)]
 DEEPEST_fusions_with_ID[,junc:=strsplit(junction,split = ":",fixed = TRUE)[[1]][9],by=1:nrow(DEEPEST_fusions_with_ID)]
@@ -243,7 +224,7 @@ num_sig_gtex_samples = c()   # a vector with the fraction of significant samples
 for (k in 1:45){
   significant_five_prime_recurrent_genes[[k]] = five_prime_genes[num_three_prime_partners >= num_partners[k]]$all_gene1
   significant_three_prime_recurrent_genes[[k]] = three_prime_genes[num_five_prime_partners >= num_partners[k]]$all_gene2
-  gtex_fusions_with_significant_recurrent_genes[[k]] = unique(GTEx_fusions[(gene1%in%significant_five_prime_recurrent_genes[[k]]) |(gene2%in%significant_three_prime_recurrent_genes[[k]])])
+  gtex_fusions_with_significant_recurrent_genes[[k]] = unique(DEEPEST_SBT_GTEx_hits[(gene1%in%significant_five_prime_recurrent_genes[[k]]) |(gene2%in%significant_three_prime_recurrent_genes[[k]])])
   gtex_fusions_extreme_fraction[k]=nrow(unique(gtex_fusions_with_significant_recurrent_genes[[k]][type=="machete",list(sample_name,fusion)])) / nrow(unique(gtex_fusions_with_significant_recurrent_genes[[k]][,list(sample_name,fusion)]))
   gtex_samples_extreme_fraction[k]=nrow(unique(gtex_fusions_with_significant_recurrent_genes[[k]][type=="machete",list(sample_name)])) / 287*100
   gtex_samples_nonextreme_fraction[k]=nrow(unique(gtex_fusions_with_significant_recurrent_genes[[k]][type=="knife",list(sample_name)])) / 287*100
