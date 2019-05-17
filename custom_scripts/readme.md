@@ -18,5 +18,6 @@ The provided custom scripts in this folder have been used to perform downstream 
 
 - recurrent_partners_statistical_analysis.R: this script performs the statistical analysis based on generalized birthday problem to find significantly-fused genes and also show the recurrent fusions are highly enriched in fuions. Then it compares the distinct profiles of significantly fused genes in TCGA and GTEx samples (corresponding to results in Figure 4).   
 
-protein_domains_statistical_analysis.r
-- protein_domains_GO_enrichment_analysis.R:
+- protein_domains_statistical_analysis.r: This script finds enriched single protein domains and protein domains across fusion proteins when their frequencies are compared to their null frequencies in the reference transcriptome (corresponding to Dataset S3).  
+
+- protein_domains_GO_enrichment_analysis.R: This script performs GO enrichment analysis to find enriched biological functions in the  enriched protein domains(corresponding to Figure 5B).  
