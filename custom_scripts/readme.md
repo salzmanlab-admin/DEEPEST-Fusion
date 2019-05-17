@@ -17,7 +17,7 @@ The provided custom scripts in this folder have been used to perform downstream 
 
 - kinase_cosmic_analysis.R: this script performs a statistical analysis to identify TCGA tumor types with high enrichment for fusions involving kinase or COSMIC genes (corresponding to the results presented in Figure 2B and 5A in the paper)
 
-- recurrent_partners_statistical_analysis.R: this script performs the statistical analysis based on generalized birthday problem to find significantly-fused genes and also show the recurrent fusions are highly enriched in fuions. Then it compares the distinct profiles of significantly fused genes in TCGA and GTEx samples (corresponding to results in Figure 4).   
+- recurrent_partners_statistical_analysis.R: this script performs the statistical analysis based on generalized birthday problem to find significantly-fused genes and also show the recurrent fusions are highly enriched in fuions. Then it compares the distinct profiles of significantly fused genes in TCGA and GTEx samples (corresponding to results in Figures 3 (for recurrent fusions) and 4 (for significantly fused genes)).   
 
 - protein_domains_statistical_analysis.r: This script finds enriched single protein domains and protein domains across fusion proteins when their frequencies are compared to their null frequencies in the reference transcriptome (corresponding to Dataset S3).  
 
