@@ -1,5 +1,5 @@
 # Custom scripts
-The provided custom scripts in this folder have been used to perform downstream systems-level analysis on the fusions detected by DEEPEST on the TCGA corpus. The scripts also generate the figures that have been used to depict the analysis. All scripts are in R and all needed files for running them are provided in [files folder] (https://github.com/salzmanlab/DEEPEST-Fusion/tree/master/custom_scripts/files). The following packages needed to be installed in R before running the scripts:  
+The provided custom scripts in this folder have been used to perform downstream systems-level analysis on the fusions detected by DEEPEST on the TCGA corpus. The scripts also generate the figures that have been used to depict the analysis. All scripts are in R and all needed files for running them are provided in [files folder](https://github.com/salzmanlab/DEEPEST-Fusion/tree/master/custom_scripts/files). The following packages needed to be installed in R before running the scripts:  
 
 - data.table
 - stringr
