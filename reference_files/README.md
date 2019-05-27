@@ -16,7 +16,7 @@ We provide two options for index files:
 
    1- Download the tar folder containing all ready-to-use bowtie2 index files based on human genome build hg38 directly from (file size: 152 GB): https://drive.google.com/open?id=1ftT5UjKafcsDzUFlV49szOD8SiH3-Qws
 
-   2- Download the reference sequence and annotation files for human genome build hg38 from: https://drive.google.com/a/stanford.edu/file/d/1PhZA63Jf4mHZr02pOR5wwadSPc2UKuNj/view?usp=sharing and follow the instructions below to build the index files:   
+   2- Download the reference sequence and annotation files for human genome build hg38 from (file size 12GB): https://drive.google.com/a/stanford.edu/file/d/1PhZA63Jf4mHZr02pOR5wwadSPc2UKuNj/view?usp=sharing and follow the instructions below to build the index files:   
 # Software Requirements
 
 - Bowtie2 2.2.9
