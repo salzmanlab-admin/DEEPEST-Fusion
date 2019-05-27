@@ -14,9 +14,9 @@ DEEPEST-Fusion needs the following index files:
 
 We provide two options for index files: 
 
-   1- downloading a tar folder containing all ready-to-use bowtie2 index files based on human genome build hg38 directly from (file size: 152 GB): https://drive.google.com/open?id=1ftT5UjKafcsDzUFlV49szOD8SiH3-Qws
+   1- Download the tar folder containing all ready-to-use bowtie2 index files based on human genome build hg38 directly from (file size: 152 GB): https://drive.google.com/open?id=1ftT5UjKafcsDzUFlV49szOD8SiH3-Qws
 
-   2- follow the instructions below to build the index files:   
+   2- Download the reference sequence and annotation files for human genome build hg38 from: https://drive.google.com/a/stanford.edu/file/d/1PhZA63Jf4mHZr02pOR5wwadSPc2UKuNj/view?usp=sharing and follow the instructions below to build the index files:   
 # Software Requirements
 
 - Bowtie2 2.2.9
@@ -24,11 +24,7 @@ We provide two options for index files:
 
 # Creating known_fusions fasta and pickle files
 
-In order to create known_fusions.fa file, please run the following command:
-    
-    cat known_fusions_*.fa > known_fusions.fa
-
-This fasta should be used to build known fusion index. In order to create known_fusions.pickle, please run the following command:
+The known_fusions.fa file should be used to build known fusions index. In order to create known_fusions.pickle, please run the following command:
 
     python create_pickle_file.py --fasta known_fusions.fa
 
