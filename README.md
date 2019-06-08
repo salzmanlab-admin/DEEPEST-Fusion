@@ -1,9 +1,9 @@
 # DEEPEST-Fusion
 
-This repository contains the JSON script written in Common Workflow Language (CWL) for "Data-Enriched Efficient PrEcise STatistical Fusion detection" (DEEPEST-Fusion), which is a statistical fusion detection algorithm particularly engineered for screening big RNA sequencing databases. 
+DEEPEST-Fusion (Data-Enriched Efficient PrEcise STatistical Fusion detection) is a statistical fusion detection algorithm developed in the Salzman Lab (http://salzmanlab.stanford.edu/). This repository contains the instructions on how to use the online tool or run the tool on a local cluster. DEEPEST is a completele suit of splice detection algorithms that can detect linear junctions, backsplice junctions (for circRNA detection), and fusion junctions. 
 
 # Online tool with web interface:
-DEEPEST-Fusion App with a web interface is now publicly available on Cancer Genomics Cloud (CGC) at: https://cgc.sbgenomics.com/public/apps#jordanski.milos/deepest-fusion/deepest-fusion/
+DEEPEST-Fusion online tool with a web interface is now publicly available on Cancer Genomics Cloud (CGC) at: https://cgc.sbgenomics.com/public/apps#jordanski.milos/deepest-fusion/deepest-fusion/
 
 The App is easy-to-use with only few clicks and can be run either by uploading user dataset or by linking public RNA-Seq datasets already available on CGC (such as TCGA, TARGET, CCLE, ...). 
 
