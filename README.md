@@ -69,4 +69,4 @@ Hsieh, G., Bierman, R., Szabo, L., Lee, A.G., Freeman, D.E., Watson, N., Sweet-C
 Szabo, L., Morey, R., Palpant, N.J., Wang, P.L., Afari, N., Jiang, C., Parast, M.M., Murry, C.E., Laurent, L.C. and Salzman, J., 2015. Statistically based splicing detection reveals neural enrichment and tissue-specific induction of circular RNA during human fetal development. Genome biology, 16(1), p.126. https://genomebiology.biomedcentral.com/articles/10.1186/s13059-015-0690-5
 # Contact
 
-If you have any questions, please contact either Roozbeh Dehghannasiri (rdehghan@stanford.edu) or Milos Jordanski (milos.jordanski@stanford.edu).
+In case of any questions, please contact Roozbeh Dehghannasiri (rdehghan@stanford.edu) or Milos Jordanski (milos.jordanski@stanford.edu).
