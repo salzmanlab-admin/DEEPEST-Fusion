@@ -2,7 +2,8 @@
 
 This repository contains the JSON script written in Common Workflow Language (CWL) for "Data-Enriched Efficient PrEcise STatistical Fusion detection" (DEEPEST-Fusion), which is a statistical fusion detection algorithm particularly engineered for screening big RNA sequencing databases. 
 
-New: DEEPEST-Fusion App with a web interface is now publicly available on Cancer Genomics Cloud (CGC) at: https://cgc.sbgenomics.com/public/apps#jordanski.milos/deepest-fusion/deepest-fusion/
+# Online tool with web interface:
+DEEPEST-Fusion App with a web interface is now publicly available on Cancer Genomics Cloud (CGC) at: https://cgc.sbgenomics.com/public/apps#jordanski.milos/deepest-fusion/deepest-fusion/
 
 The App is easy-to-use with only few clicks and can be run either on the user datasets or on public RNA-Seq databases already available on CGC (such as TCGA, TARGET, CCLE, ...). 
 
