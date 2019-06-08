@@ -1,6 +1,6 @@
 # DEEPEST-Fusion
 
-DEEPEST-Fusion (Data-Enriched Efficient PrEcise STatistical Fusion detection) is a statistical fusion detection algorithm developed in the Salzman Lab (http://salzmanlab.stanford.edu/). This repository contains the instructions on how to use the online tool or run the tool on a local cluster. DEEPEST is a completele suit of splice detection algorithms that can detect linear junctions, backsplice junctions (for circRNA detection), and fusion junctions. 
+DEEPEST-Fusion (Data-Enriched Efficient PrEcise STatistical Fusion detection) is a statistical fusion detection algorithm developed in the Salzman Lab (http://salzmanlab.stanford.edu/).  DEEPEST is a completele suit of splice detection algorithms that can detect linear junctions, backsplice junctions (for circRNA detection), and fusion junctions. This repository contains the instructions on how to use the online tool or run the tool on a local cluster.
 
 # Online tool with web interface:
 DEEPEST-Fusion online tool with a web interface is now publicly available on Cancer Genomics Cloud (CGC) at: https://cgc.sbgenomics.com/public/apps#jordanski.milos/deepest-fusion/deepest-fusion/
