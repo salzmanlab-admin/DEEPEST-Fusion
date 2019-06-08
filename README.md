@@ -3,7 +3,8 @@
 DEEPEST-Fusion (Data-Enriched Efficient PrEcise STatistical Fusion detection) is a statistical fusion detection algorithm developed in the Salzman Lab (http://salzmanlab.stanford.edu/).  DEEPEST is a completele suit of splice detection algorithms that can detect linear junctions, backsplice junctions (for circRNA detection), and fusion junctions. This repository contains the instructions on how to use the online tool or run the tool on a local cluster.
 
 # Online tool with web interface:
-DEEPEST-Fusion online tool with a web interface is now publicly available on Cancer Genomics Cloud (CGC) at: https://cgc.sbgenomics.com/public/apps#jordanski.milos/deepest-fusion/deepest-fusion/
+DEEPEST-Fusion online tool with a web interface is now publicly available on Cancer Genomics Cloud (CGC) (http://www.cancergenomicscloud.org/) at: https://cgc.sbgenomics.com/public/apps#jordanski.milos/deepest-fusion/deepest-fusion/
+To run the online tool on the cloud, you need to login to CGG [here](https://cgc-accounts.sbgenomics.com/auth/login?next=https%3A%2F%2Fcgc-accounts.sbgenomics.com%2Foauth2%2Fauthorization%3Fresponse_type%3Dcode%26client_id%3D08bbb98f354e4554bd7fd315de64d955%26redirect_uri%3Dhttps%253A%252F%252Fcgc.sbgenomics.com%252Foauth2%252Fredirect%26scope%3Dopenid%26state%3DDlQ4PIZFvqpWnrod5lOzyVG6M9qcLf%26nonce%3D2AKOsefdeicsyDctFCyug2LBl6KyL8).
 
 The App is easy-to-use with only few clicks and can be run either by uploading user dataset or by linking public RNA-Seq datasets already available on CGC (such as TCGA, TARGET, CCLE, ...). 
 
