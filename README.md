@@ -10,7 +10,7 @@ The tool is easy-to-use with only few clicks and can be run either on the datase
 To run the online tool on the cloud, you need to login to CGG [here](https://cgc-accounts.sbgenomics.com/auth/login?next=https%3A%2F%2Fcgc-accounts.sbgenomics.com%2Foauth2%2Fauthorization%3Fresponse_type%3Dcode%26client_id%3D08bbb98f354e4554bd7fd315de64d955%26redirect_uri%3Dhttps%253A%252F%252Fcgc.sbgenomics.com%252Foauth2%252Fredirect%26scope%3Dopenid%26state%3DDlQ4PIZFvqpWnrod5lOzyVG6M9qcLf%26nonce%3D2AKOsefdeicsyDctFCyug2LBl6KyL8). Each new account would have $300 pilot funds automatically. Our current estimate for running DEEPEST on typical RNA-Seq datasets (such as TCGA or GTEx) is $4-$5 per sample.    
 
 
-# Software requirements
+# Software requirements for running on a local cluster
 
 - Anaconda
 - SciPy 1.1.0
@@ -19,6 +19,7 @@ To run the online tool on the cloud, you need to login to CGG [here](https://cgc
 - java
 - R 3.5.1
 - Trim Galore! 0.4.4
+
 # DEEPEST-Fusion main script
 
 All computational steps including any alignment step required for running DEEPEST-Fusion has been packaged in a single JSON file "DEEPEST-Fusion_pipeline.json". This script can be run on any local cluster using an input JSON file that provides the paths for reference index files and input RNA-seq files. To run the script, Rabix toolkit should be pre-installed on the local cluster.  
