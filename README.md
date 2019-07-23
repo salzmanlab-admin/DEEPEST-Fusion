@@ -64,13 +64,10 @@ In each report file, high quality junctions are called by imposing thresholds on
 
 All scripts needed for implementing Sequence Bloom Tree (SBT) filters for an RNA-Seq database can be found in this github repository: https://github.com/elehnertSBG/SBT-Apps. Mor information on the SBT algorithm and the order in which the SBT CWL scripts should be run can be found in the original SBT manual: https://www.cs.cmu.edu/~ckingsf/software/bloomtree/sbt-manual.pdf 
 
-# References
+# Citation
 
-Dehghannasiri, R., Freeman, D.E., Jordanski, M., Hsieh, G.L., Damljanovic, A., Lehnert, E. and Salzman, J., 2019. Improved detection of gene fusions by applying statistical methods reveals new oncogenic RNA cancer drivers., Biorxive. https://www.biorxiv.org/content/10.1101/659078v1?rss=1
+Dehghannasiri, R., Freeman, D.E., Jordanski, M., Hsieh, G.L., Damljanovic, A., Lehnert, E. and Salzman, J., 2019. Improved detection of gene fusions by applying statistical methods reveals oncogenic RNA cancer drivers., Proceedings of the National Academy of Sciences, Jul 2019, 201900391; DOI: https://doi.org/10.1073/pnas.1900391116
 
-Hsieh, G., Bierman, R., Szabo, L., Lee, A.G., Freeman, D.E., Watson, N., Sweet-Cordero, E.A. and Salzman, J., 2017. Statistical algorithms improve accuracy of gene fusion detection. Nucleic acids research, 45(13), pp.e126-e126. https://academic.oup.com/nar/article/45/13/e126/3852042
-
-Szabo, L., Morey, R., Palpant, N.J., Wang, P.L., Afari, N., Jiang, C., Parast, M.M., Murry, C.E., Laurent, L.C. and Salzman, J., 2015. Statistically based splicing detection reveals neural enrichment and tissue-specific induction of circular RNA during human fetal development. Genome biology, 16(1), p.126. https://genomebiology.biomedcentral.com/articles/10.1186/s13059-015-0690-5
 # Contact
 
 In case of any questions, please contact Roozbeh Dehghannasiri (rdehghan@stanford.edu) or Milos Jordanski (milos.jordanski@stanford.edu).
