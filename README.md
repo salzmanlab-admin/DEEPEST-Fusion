@@ -66,7 +66,7 @@ All scripts needed for implementing Sequence Bloom Tree (SBT) filters for an RNA
 
 # Citation
 
-Dehghannasiri, R., Freeman, D.E., Jordanski, M., Hsieh, G.L., Damljanovic, A., Lehnert, E. and Salzman, J., 2019. Improved detection of gene fusions by applying statistical methods reveals oncogenic RNA cancer drivers., Proceedings of the National Academy of Sciences, Jul 2019, 201900391; DOI: https://doi.org/10.1073/pnas.1900391116
+Dehghannasiri, R., Freeman, D.E., Jordanski, M., Hsieh, G.L., Damljanovic, A., Lehnert, E. and Salzman, J., 2019. `Improved detection of gene fusions by applying statistical methods reveals oncogenic RNA cancer drivers`, Proceedings of the National Academy of Sciences, Jul 2019, 201900391; DOI: https://doi.org/10.1073/pnas.1900391116
 
 # Contact
 
