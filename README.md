@@ -42,6 +42,8 @@ All input parameters required for running DEEPEST-Fusion JSON script should be p
 Note: Since index files are too large to be uploaded to githiub, we provide original reference fasta files (genome, transcriptome, regular junctions, scrambled junctions, ribosome) along with needed scripts/instructions for generating index files here: 
 https://github.com/salzmanlab/DEEPEST-Fusion/tree/master/reference_files 
 
+You can also download all preprocessed ready-to-use index files and use them directly in the input JSON file from here: https://drive.google.com/open?id=1ftT5UjKafcsDzUFlV49szOD8SiH3-Qws 
+
 # Toolkit for executing DEEPEST-Fusion JSON script
 
 For running DEEPEST-Fusion JSON script on a local cluster, Rabix should be installed first. Rabix is an open-source tool developed by Seven Bridges, that can be used to run a computational workflow written in Common Workflow Language (CWL) on a locul cluster. More information on how to install Rabix can be found in this GitHub repositiory: https://github.com/rabix/bunny  
