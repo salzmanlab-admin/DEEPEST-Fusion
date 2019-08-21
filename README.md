@@ -1,6 +1,6 @@
 # DEEPEST
 
-DEEPEST (Data-Enriched Efficient PrEcise STatistical Fusion detection) is a statistical fusion detection algorithm developed in the [Salzman Lab] (http://salzmanlab.stanford.edu/).  DEEPEST is a completele suit of splice detection algorithms that can detect linear junctions, backsplice junctions (for circRNA detection), and fusion junctions. This repository contains the instructions on how to use the online tool or run the tool on a local cluster.
+DEEPEST (Data-Enriched Efficient PrEcise STatistical Fusion detection) is a statistical fusion detection algorithm developed in the [Salzman Lab](http://salzmanlab.stanford.edu/). DEEPEST is a completele suit of splice detection algorithms that can detect linear junctions, backsplice junctions (for circRNA detection), and fusion junctions. This repository contains the instructions on how to use the online tool or run the tool on a local cluster.
 
 # Online tool with web interface:
 An online tool for DEEPEST is now publicly available on [Cancer Genomics Cloud (CGC)](http://www.cancergenomicscloud.org/) at: https://cgc.sbgenomics.com/public/apps#jordanski.milos/deepest-fusion/deepest-fusion/
@@ -56,9 +56,9 @@ An example batch script `DEEPEST-Fusion_submit_job.sbatch`, based on job schedul
 
 Three primary report files containing reported fusion junction with their corresponding statsitical scores and number of various types of aligned reads can be found as follows:
 
-- modified-MACHETE report file (based on FarJunctions database): `Knife_and_MACHETE_Known_fusions_parallel_rev_\*/root/MACHETE_AppendNaiveReptParallel/\[Dataset name\]\_naive_report_AppendedMACHETE\_Parallel.txt`
-- modified-MACHETE report file (based on known fusion database): `Knife_and_MACHETE_Known_fusions_parallel_rev_\*/root/MACHETE_AppendNaiveReptParallel_Known/\[Dataset name\]\_naive_report_Appended_MACHETE_Parallel\_Known.txt`
-- KNIFE report file: `Knife_and_MACHETE_Known_fusions_parallel_rev_\*/root/KNIFE_GLM_model/\[Dataset name\]\_1\_circJuncProbs.txt_cdf`  
+- modified-MACHETE report file (based on FarJunctions database): `Knife_and_MACHETE_Known_fusions_parallel_rev_*/root/MACHETE_AppendNaiveReptParallel/\[Dataset name\]\_naive_report_AppendedMACHETE\_Parallel.txt`
+- modified-MACHETE report file (based on known fusion database): `Knife_and_MACHETE_Known_fusions_parallel_rev_*/root/MACHETE_AppendNaiveReptParallel_Known/\[Dataset name\]\_naive_report_Appended_MACHETE_Parallel\_Known.txt`
+- KNIFE report file: `Knife_and_MACHETE_Known_fusions_parallel_rev_*/root/KNIFE_GLM_model/\[Dataset name\]\_1\_circJuncProbs.txt_cdf`  
 
 In each report file, high confidence junctions are called via filtering based on the statistical scores (all needed filters and their thresholds are described in the paper). A list of nominated fusion junctions as the output of the junction nomination component (the first component in DEEPEST-Fusion) is reported as the union of fusion junctions called from the above three report files. This list of nominated fusions by the first component needs to undergo a statistical refinement step, which is based on Sequence Bloom Trees.
 
