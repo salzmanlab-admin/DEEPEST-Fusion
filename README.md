@@ -1,6 +1,6 @@
 # DEEPEST
 
-DEEPEST (Data-Enriched Efficient PrEcise STatistical Fusion detection) is a statistical fusion detection algorithm developed in the [Salzman Lab](http://salzmanlab.stanford.edu/). DEEPEST is a completele suit of splice detection algorithms that can detect linear junctions, backsplice junctions (for circRNA detection), and fusion junctions. This repository contains the instructions on how to use the online tool or run the tool on a local cluster.
+DEEPEST (Data-Enriched Efficient PrEcise STatistical Fusion detection) is a statistical fusion detection algorithm developed in the [Salzman Lab](http://salzmanlab.stanford.edu/). DEEPEST is a comprehensive splice detection suite for detecting linear junctions, backsplice junctions (for circRNA detection), and fusion junctions. This repository contains the instructions on how to use the online tool or run the tool on a local cluster.
 
 # Online tool with web interface:
 An online tool for DEEPEST is now publicly available on [Cancer Genomics Cloud (CGC)](http://www.cancergenomicscloud.org/) at: https://cgc.sbgenomics.com/public/apps#jordanski.milos/deepest-fusion/deepest-fusion/
@@ -33,7 +33,7 @@ All input parameters required for running DEEPEST-Fus JSON script should be prov
 - Bowtie2 index files for the scrambled junctions
 - Bowtie2 index files for ribosome
 - Bowtie2 index files for the transcriptome
-- Bowtie2 index files for indel junctions (for junctions with up to 5 symmetric indels at the splice site)
+- Bowtie2 index files for indel junctions (junctions with up to 5 symmetric indels at their splice sites)
 - Fastq files for the input RNA-Seq data
 - Pickle files for genes/exons annotation
 - Pickle file for the known fusions list (a database of candidate fusions constructed based on `ChimerDB 3.0`, a curated list of known cancer fusions)
