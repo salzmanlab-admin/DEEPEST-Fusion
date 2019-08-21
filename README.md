@@ -26,7 +26,7 @@ All computational steps including any alignment step required for running DEEPES
 
 # Input file
 
-All input parameters required for running DEEPEST-Fus JSON script should be provided via an input JSON file `DEEPEST-Fusion_input.json`. The following parameters should be set in the input JSON file:
+The paths to input files required for running DEEPEST should be provided via a single input JSON file `DEEPEST-Fusion_input.json`. The following parameters should be set in the input JSON file:
 
 - Bowtie2 index files for the reference genome
 - Bowtie2 index files for the regular junctions
@@ -39,28 +39,28 @@ All input parameters required for running DEEPEST-Fus JSON script should be prov
 - Pickle file for the known fusions list (a database of candidate fusions constructed based on `ChimerDB 3.0`, a curated list of known cancer fusions)
 - Bowtie2 index files for known fusions
 
-Note: Since index files are too large to be uploaded to githiub, we provide original reference fasta files (genome, transcriptome, regular junctions, scrambled junctions, ribosome) along with needed scripts/instructions for generating index files here: 
+Note: Since index files are too large and cannot be uploaded to githiub, we provide original reference fasta files (genome, transcriptome, regular junctions, scrambled junctions, ribosome) along with needed scripts/instructions for building index files here: 
 https://github.com/salzmanlab/DEEPEST-Fusion/tree/master/reference_files 
 
 You can also download all preprocessed ready-to-use index files and use them directly in the input JSON file from here: https://drive.google.com/open?id=1ftT5UjKafcsDzUFlV49szOD8SiH3-Qws 
 
 # Toolkit for executing DEEPEST-Fusion JSON script
 
-For running DEEPEST-Fusion JSON script on a local cluster, Rabix should be installed first. Rabix is an open-source tool developed by Seven Bridges, that can be used to run a computational workflow written in Common Workflow Language (CWL) on a locul cluster. More information on how to install Rabix can be found in this GitHub repositiory: https://github.com/rabix/bunny  
+For running DEEPEST on a local cluster, Rabix should be installed first. Rabix is an open-source tool developed by Seven Bridges, that can be used to run a computational workflow written in Common Workflow Language (CWL) on a locul cluster. More information on how to install Rabix can be found in this GitHub repositiory: https://github.com/rabix/bunny  
 
-# Example batch script for running DEEPEST-Fusion on a local cluster
+# An example batch script for running DEEPEST on a local cluster
 
-An example batch script `DEEPEST-Fusion_submit_job.sbatch`, based on job scheduler Slurm has been provided. In the batch script file the path to where Rabix has been installed, DEEPEST-Fusion pipeline JSON file (`DEEPEST-Fusion_pipeline.json`), and DEEPEST-Fusion input JSON file (`DEEPEST-Fusion_input.json`) should be provided. 
+An example batch script `DEEPEST-Fusion_submit_job.sbatch`, based on job scheduler Slurm has been provided. In the batch script file the path to where Rabix has been installed, DEEPEST pipeline JSON file (`DEEPEST-Fusion_pipeline.json`), and DEEPEST input JSON file (`DEEPEST-Fusion_input.json`) should be provided. 
 
 # Output files
 
 Three primary report files containing reported fusion junction with their corresponding statsitical scores and number of various types of aligned reads can be found as follows:
 
-- modified-MACHETE report file (based on FarJunctions database): `Knife_and_MACHETE_Known_fusions_parallel_rev_*/root/MACHETE_AppendNaiveReptParallel/\[Dataset name\]\_naive_report_AppendedMACHETE\_Parallel.txt`
-- modified-MACHETE report file (based on known fusion database): `Knife_and_MACHETE_Known_fusions_parallel_rev_*/root/MACHETE_AppendNaiveReptParallel_Known/\[Dataset name\]\_naive_report_Appended_MACHETE_Parallel\_Known.txt`
-- KNIFE report file: `Knife_and_MACHETE_Known_fusions_parallel_rev_*/root/KNIFE_GLM_model/\[Dataset name\]\_1\_circJuncProbs.txt_cdf`  
+- modified-MACHETE report file (based on FarJunctions database): `Knife_and_MACHETE_Known_fusions_parallel_rev_*/root/MACHETE_AppendNaiveReptParallel/[Dataset name]_naive_report_AppendedMACHETE_Parallel.txt`
+- modified-MACHETE report file (based on known fusion database): `Knife_and_MACHETE_Known_fusions_parallel_rev_*/root/MACHETE_AppendNaiveReptParallel_Known/[Dataset name]_naive_report_Appended_MACHETE_Parallel_Known.txt`
+- KNIFE report file: `Knife_and_MACHETE_Known_fusions_parallel_rev_*/root/KNIFE_GLM_model/[Dataset name]_1_circJuncProbs.txt_cdf`  
 
-In each report file, high confidence junctions are called via filtering based on the statistical scores (all needed filters and their thresholds are described in the paper). A list of nominated fusion junctions as the output of the junction nomination component (the first component in DEEPEST-Fusion) is reported as the union of fusion junctions called from the above three report files. This list of nominated fusions by the first component needs to undergo a statistical refinement step, which is based on Sequence Bloom Trees.
+In each report file, high confidence junctions are called via filtering based on the statistical scores (all needed filters and their thresholds are described in the paper). A list of nominated fusion junctions as the output of the junction nomination component (the first component in DEEPEST) is reported as the union of fusion junctions called from the above three report files. This list of nominated fusions by the first component needs to undergo a statistical refinement step, which is based on Sequence Bloom Trees.
 
 # CWL scripts for implementing Sequence Bloom Trees
 
