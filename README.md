@@ -56,9 +56,9 @@ An example batch script "DEEPEST-Fusion_submit_job.sbatch", based on job schedul
 
 Three primary report files containing reported fusion junction with their corresponding statsitical scores and number of various types of aligned reads can be found as follows:
 
-- modified-MACHETE report file (based on FarJunctions database): Knife_and_MACHETE_Known_fusions_parallel_rev_\*/root/MACHETE_AppendNaiveReptParallel/\[Dataset name\]\_naive_report_AppendedMACHETE\_Parallel.txt
-- modified-MACHETE report file (based on known fusion database): Knife_and_MACHETE_Known_fusions_parallel_rev_\*/root/MACHETE_AppendNaiveReptParallel_Known/\[Dataset name\]\_naive_report_Appended_MACHETE_Parallel\_Known.txt
-- KNIFE report file: Knife_and_MACHETE_Known_fusions_parallel_rev_\*/root/KNIFE_GLM_model/\[Dataset name\]\_1\_circJuncProbs.txt_cdf  
+- modified-MACHETE report file (based on FarJunctions database): `Knife_and_MACHETE_Known_fusions_parallel_rev_\*/root/MACHETE_AppendNaiveReptParallel/\[Dataset name\]\_naive_report_AppendedMACHETE\_Parallel.txt`
+- modified-MACHETE report file (based on known fusion database): `Knife_and_MACHETE_Known_fusions_parallel_rev_\*/root/MACHETE_AppendNaiveReptParallel_Known/\[Dataset name\]\_naive_report_Appended_MACHETE_Parallel\_Known.txt`
+- KNIFE report file: `Knife_and_MACHETE_Known_fusions_parallel_rev_\*/root/KNIFE_GLM_model/\[Dataset name\]\_1\_circJuncProbs.txt_cdf`  
 
 In each report file, high quality junctions are called by imposing thresholds on the statistical scores (as described in the paper). The list of reported fusion junctions which is the output of the junction nomination component (first computational component in DEEPEST-Fusion) is the union of fusion junctions called from these 3 report files. This list of reported fusions should then undergo the statistical refinement step (the second componenet of DEEPEST-Fusion) which is based on Sequence Bloom Trees.
 
@@ -68,7 +68,7 @@ All scripts needed for implementing Sequence Bloom Tree (SBT) filters for an RNA
 
 # Citation
 
-Dehghannasiri, R., Freeman, D.E., Jordanski, M., Hsieh, G.L., Damljanovic, A., Lehnert, E. and Salzman, J., 2019. `Improved detection of gene fusions by applying statistical methods reveals oncogenic RNA cancer drivers`, Proceedings of the National Academy of Sciences, Jul 2019, 201900391; DOI: https://doi.org/10.1073/pnas.1900391116
+Dehghannasiri, R., Freeman, D.E., Jordanski, M., Hsieh, G.L., Damljanovic, A., Lehnert, E. and Salzman, J., 2019. Improved detection of gene fusions by applying statistical methods reveals oncogenic RNA cancer drivers, Proceedings of the National Academy of Sciences, Jul 2019, 201900391; DOI: https://www.pnas.org/content/116/31/15524
 
 # Contact
 
