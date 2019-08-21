@@ -36,7 +36,7 @@ All input parameters required for running DEEPEST-Fusion JSON script should be p
 - Bowtie2 index files for indel junctions (for junctions with up to 5 symmetric indels at the splice site)
 - Fastq files for the input RNA-Seq data
 - Pickle files for genes/exons annotation
-- Pickle file for the known fusions list (a list of known fusions constructed based on ChimerDB 3.0 curated list of known cancer fusions)
+- Pickle file for the known fusions list (a database of candidate fusions constructed based on `ChimerDB 3.0`, a curated list of known cancer fusions)
 - Bowtie2 index files for known fusions
 
 Note: Since index files are too large to be uploaded to githiub, we provide original reference fasta files (genome, transcriptome, regular junctions, scrambled junctions, ribosome) along with needed scripts/instructions for generating index files here: 
@@ -50,7 +50,7 @@ For running DEEPEST-Fusion JSON script on a local cluster, Rabix should be insta
 
 # Example batch script for running DEEPEST-Fusion on a local cluster
 
-An example batch script "DEEPEST-Fusion_submit_job.sbatch", based on job scheduler Slurm has been provided. In the batch script file the path to where Rabix has been installed, DEEPEST-Fusion pipeline JSON file (DEEPEST-Fusion_pipeline.json), and DEEPEST-Fusion input JSON file (DEEPEST-Fusion_input.json) should be provided. 
+An example batch script "`DEEPEST-Fusion_submit_job.sbatch`", based on job scheduler Slurm has been provided. In the batch script file the path to where Rabix has been installed, DEEPEST-Fusion pipeline JSON file (`DEEPEST-Fusion_pipeline.json`), and DEEPEST-Fusion input JSON file (`DEEPEST-Fusion_input.json`) should be provided. 
 
 # Output files
 
@@ -60,7 +60,7 @@ Three primary report files containing reported fusion junction with their corres
 - modified-MACHETE report file (based on known fusion database): `Knife_and_MACHETE_Known_fusions_parallel_rev_\*/root/MACHETE_AppendNaiveReptParallel_Known/\[Dataset name\]\_naive_report_Appended_MACHETE_Parallel\_Known.txt`
 - KNIFE report file: `Knife_and_MACHETE_Known_fusions_parallel_rev_\*/root/KNIFE_GLM_model/\[Dataset name\]\_1\_circJuncProbs.txt_cdf`  
 
-In each report file, high quality junctions are called by imposing thresholds on the statistical scores (as described in the paper). The list of reported fusion junctions which is the output of the junction nomination component (first computational component in DEEPEST-Fusion) is the union of fusion junctions called from these 3 report files. This list of reported fusions should then undergo the statistical refinement step (the second componenet of DEEPEST-Fusion) which is based on Sequence Bloom Trees.
+In each report file, high confidence junctions are called via filtering based on the statistical scores (all needed filters and their thresholds are described in the paper). A list of nominated fusion junctions as the output of the junction nomination component (the first component in DEEPEST-Fusion) is reported as the union of fusion junctions called from the above three report files. This list of nominated fusions by the first component needs to undergo a statistical refinement step, which is based on Sequence Bloom Trees.
 
 # CWL scripts for implementing Sequence Bloom Trees
 
