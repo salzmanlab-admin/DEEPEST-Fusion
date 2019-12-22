@@ -11,6 +11,7 @@ To run the online tool, you need to login to CGG [here](https://cgc-accounts.sbg
 
 
 # Software requirements for running on a local cluster
+The following software prgrams are needed to run DEEPEST on a local cluster. They just need to be available as modules on the cluster and DEEPEST automatically loads them with `module load` command.
 
 - Anaconda
 - SciPy 1.1.0
