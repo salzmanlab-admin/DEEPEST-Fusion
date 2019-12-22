@@ -39,10 +39,11 @@ The paths to input files required for running DEEPEST should be provided via a s
 - Pickle file for the known fusions list (a database of candidate fusions constructed based on `ChimerDB 3.0`, a curated list of known cancer fusions)
 - Bowtie2 index files for known fusions
 
-Note: Since index files are too large and cannot be uploaded to githiub, we provide original reference fasta files (genome, transcriptome, regular junctions, scrambled junctions, ribosome) along with needed scripts/instructions for building index files here: 
+You can download all preprocessed and ready-to-use index files from here: https://drive.google.com/open?id=1ftT5UjKafcsDzUFlV49szOD8SiH3-Qws and point them  
+
+You can also build the index files yourself. The scripts/instructions needed for building the index files along with the reference fasta files (genome, transcriptome, regular junctions, scrambled junctions, ribosome) are provided here: 
 https://github.com/salzmanlab/DEEPEST-Fusion/tree/master/reference_files 
 
-You can also download all preprocessed ready-to-use index files and use them directly in the input JSON file from here: https://drive.google.com/open?id=1ftT5UjKafcsDzUFlV49szOD8SiH3-Qws 
 
 # Toolkit for executing DEEPEST-Fusion JSON script
 
