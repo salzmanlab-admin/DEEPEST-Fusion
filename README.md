@@ -5,7 +5,7 @@ DEEPEST (Data-Enriched Efficient PrEcise STatistical Fusion detection) is a stat
 # Online tool with web interface:
 An online tool for DEEPEST is now publicly available on [Cancer Genomics Cloud (CGC)](http://www.cancergenomicscloud.org/) at: https://cgc.sbgenomics.com/public/apps#jordanski.milos/deepest-fusion/deepest-fusion/
 
-The tool is ready-to-run with only few clicks and can be run either on the dataset uploaded by the user or on public RNA-Seq datasets already available on CGC (such as TCGA, TARGET, CCLE, ...). 
+The tool is ready-to-run with only few clicks and can be run either on the dataset uploaded by the user or on public RNA-Seq datasets (such as TCGA, TARGET, CCLE, ...) already available on CGC. 
 
 To run the online tool, you need to login to CGG [here](https://cgc-accounts.sbgenomics.com/auth/login?next=https%3A%2F%2Fcgc-accounts.sbgenomics.com%2Foauth2%2Fauthorization%3Fresponse_type%3Dcode%26client_id%3D08bbb98f354e4554bd7fd315de64d955%26redirect_uri%3Dhttps%253A%252F%252Fcgc.sbgenomics.com%252Foauth2%252Fredirect%26scope%3Dopenid%26state%3DDlQ4PIZFvqpWnrod5lOzyVG6M9qcLf%26nonce%3D2AKOsefdeicsyDctFCyug2LBl6KyL8). Each new account would automatically have $300 pilot funds. Our current cost estimate for running DEEPEST on a typical RNA-Seq dataset (such as TCGA or GTEx) is $4-$5 per sample.    
 
