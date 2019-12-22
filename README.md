@@ -1,11 +1,11 @@
 # DEEPEST
 
-DEEPEST (Data-Enriched Efficient PrEcise STatistical Fusion detection) is a statistical fusion detection algorithm developed in the [Salzman Lab](http://salzmanlab.stanford.edu/) at Stanford University. DEEPEST is a comprehensive splice detection suite for detecting linear junctions, backsplice junctions (for circRNA detection), and fusion junctions. This repository contains the instructions on how to use the online tool or run the tool on a local cluster.
+DEEPEST (Data-Enriched Efficient PrEcise STatistical Fusion detection) is a statistical fusion detection algorithm developed in the [Salzman Lab](http://salzmanlab.stanford.edu/) at Stanford University. DEEPEST is in fact a comprehensive RNA splicing detection suite that can be used for detecting linear and circular junctions in addition to fusion junctions. There are two options for running DEEPEST: (1) running DEEPEST online tool with only few clicks on the CGC platform; or (2) running DEEPEST workflow on a local high performance computing cluster via downloading the provided wrapper and index files. The wrapper is compatible with any local cluster environment and does not need any major software installation in advance. 
 
 # Online tool with web interface:
 An online tool for DEEPEST is now publicly available on [Cancer Genomics Cloud (CGC)](http://www.cancergenomicscloud.org/) at: https://cgc.sbgenomics.com/public/apps#jordanski.milos/deepest-fusion/deepest-fusion/
 
-The tool is easy-to-use with only few clicks and can be run either on the dataset uploaded by the user or on public RNA-Seq datasets already available on CGC (such as TCGA, TARGET, CCLE, ...). 
+The tool is ready-to-run with only few clicks and can be run either on the dataset uploaded by the user or on public RNA-Seq datasets already available on CGC (such as TCGA, TARGET, CCLE, ...). 
 
 To run the online tool, you need to login to CGG [here](https://cgc-accounts.sbgenomics.com/auth/login?next=https%3A%2F%2Fcgc-accounts.sbgenomics.com%2Foauth2%2Fauthorization%3Fresponse_type%3Dcode%26client_id%3D08bbb98f354e4554bd7fd315de64d955%26redirect_uri%3Dhttps%253A%252F%252Fcgc.sbgenomics.com%252Foauth2%252Fredirect%26scope%3Dopenid%26state%3DDlQ4PIZFvqpWnrod5lOzyVG6M9qcLf%26nonce%3D2AKOsefdeicsyDctFCyug2LBl6KyL8). Each new account would automatically have $300 pilot funds. Our current cost estimate for running DEEPEST on a typical RNA-Seq dataset (such as TCGA or GTEx) is $4-$5 per sample.    
 
